@@ -11,7 +11,6 @@ import Todos from './pages/Todos'
 import { guestOnly, requiresAuth } from './loaders'
 import Loader from '@/components/Loader'
 import { ErrorBoundary } from 'react-error-boundary'
-import { dynamic } from './dynamic'
 
 //const Home = layz(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
@@ -20,10 +19,6 @@ const About = lazy(() => import('./pages/About'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 const SignIn = lazy(() => import('./pages/SignIn'))
 //const Todos = layz(() => import('./pages/Todos'))
-
-const About = dynamic(() => import('./pages/About'), {
-  loading: <Loader />
-})
 
 const router = createBrowserRouter([
   {
