@@ -1,20 +1,20 @@
 import { lazy, Suspense } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Default from './layouts/Default'
-// import Home from '@/routes/pages/Home'
-import About from '@/routes/pages/About'
-// import Movies from './pages/Movies'
-// import MovieDetails from './pages/MovieDetails'
-import NotFound from './pages/NotFound'
-// import SignIn from './pages/SignIn'
-// import Todos from './pages/Todos'
-import { fetchMovieDetails, guestOnly, requiresAuth } from './loaders'
+import Home from '@/routes/pages/Home'
+//import About from '@/routes/pages/About'
+import Movies from './pages/Movies'
+import MovieDetails from './pages/MovieDetails'
+//import NotFound from './pages/NotFound'
+//import SignIn from './pages/SignIn'
+import Todos from './pages/Todos'
+import { guestOnly, requiresAuth } from './loaders'
 import Loader from '@/components/Loader'
 import { ErrorBoundary } from 'react-error-boundary'
 import { dynamic } from './dynamic'
 
 //const Home = layz(() => import('./pages/Home'))
-// const About = layz(() => import('./pages/About'))
+const About = lazy(() => import('./pages/About'))
 //const Movies = layz(() => import('./pages/Movies'))
 //const MovieDetails = layz(() => import('./pages/MovieDetails'))
 const NotFound = lazy(() => import('./pages/NotFound'))
