@@ -1,4 +1,4 @@
-import { layz, Suspense } from 'react'
+import { lazy, Suspense } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Default from './layouts/Default'
 // import Home from '@/routes/pages/Home'
@@ -17,8 +17,8 @@ import { dynamic } from './dynamic'
 // const About = layz(() => import('./pages/About'))
 //const Movies = layz(() => import('./pages/Movies'))
 //const MovieDetails = layz(() => import('./pages/MovieDetails'))
-const NotFound = layz(() => import('./pages/NotFound'))
-const SignIn = layz(() => import('./pages/SignIn'))
+const NotFound = lazy(() => import('./pages/NotFound'))
+const SignIn = lazy(() => import('./pages/SignIn'))
 //const Todos = layz(() => import('./pages/Todos'))
 
 const About = dynamic(() => import('./pages/About'), {

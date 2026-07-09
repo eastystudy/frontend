@@ -1,7 +1,7 @@
-import { RefObject, InputHTMLAttributes } from 'react'
+import type { RefObject, InputHTMLAttributes } from 'react'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
-  ref?: RefObject<HTMLInputElement>
+  ref?: RefObject<HTMLInputElement | null>
   label?: string
 }
 
